@@ -33,18 +33,27 @@ header a {
     text-decoration: none;
     color: inherit;
 }
+
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
 /* main content */
 main {
     background-color: lightblue;
     /* make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
 }
+
 /* footer */
 footer {
     background-color: orange;
