@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* asteris wild card selector to override default styles added by the browser */
 * {
@@ -90,7 +90,7 @@ main {
     background-color: lightblue;
     /* make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top: 77px;
+    margin-top: 47px;
 }
 
 
@@ -98,4 +98,30 @@ main {
 /* footer */
 footer {
     background-color: orange;
+}
+
+/* media query: tablets and larger (768px and up) */
+
+@media screen and (min-width: 768px) {
+
+    /* header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }
