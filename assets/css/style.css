@@ -1,19 +1,19 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* asteris wild card selector to override default styles added by the browser */
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* genral style */
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* generic project styles */
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
@@ -27,11 +27,7 @@ h3 {
     color: #252525;
 }
 
-.hidden-heading {
-    display: none;
-}
-
-/* header */
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -63,8 +59,7 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* navbar styles with dropdown toggle */
-
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -76,8 +71,7 @@ nav {
     top: 100%;
 }
 
-/* nav toggle */
-
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -90,23 +84,23 @@ nav {
     font-size: 2rem;
 }
 
-/* main content */
+/* Main content */
 main {
-    /* make main element take up any surplus space to push footer down */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/* hero section */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background: url(../images/hero-image.webp) no-repeat center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
 #cover-text {
-    /* final rgba value sets the opacity so it is semi-transparent */
+    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
@@ -118,7 +112,7 @@ main {
 }
 
 #cover-text>h2,
-#cover-text>h1 {
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -149,7 +143,6 @@ main {
     margin: 5px 0;
 }
 
-/* circle reasons image */
 #circle-cover-bg {
     background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
@@ -167,12 +160,10 @@ main {
     justify-content: center;
 }
 
+/* Meetup Times section */
 #times {
-    background: url(../images/dublin-city.webp) no-repeat center/cover;
-    position: relative;
-}
-
-#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
 }
@@ -182,42 +173,50 @@ main {
     background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
-    /* this will not wrap on screens less than 400px wide. 
-    Each div will expand to fill the available space on its row. */
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Create a grid of meetup times divs over the background image */
+    /* Creates a grid of meetup time divs over the background image */
     border: 2px solid white;
 }
 
 #times h3 {
-    /* override the colour set in general styles */
+    /* Override the heading colour set in general styles */
     color: #fafafa;
 }
 
-/* gallery page */
+/* Gallery page */
 #photos img {
-        width: 100%;
-        line-height: 1em;
+    width: 100%;
+    line-height: 1em;
 }
 
-#photos img {
+#photos {
     line-height: 0;
 }
-/* footer */
+
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-
 }
 
 #social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -256,7 +255,7 @@ main {
         margin-top: 79px;
     }
 
-    /* hero */
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
@@ -279,6 +278,11 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -286,9 +290,13 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
+    }
 }
 
-/* desktops 1200px and up) */
 @media screen and (min-width: 1200px) {
 
     /* Reasons section */
